@@ -6,5 +6,52 @@
 
 body {
     background-color: black;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
 }
 
+.main-section {
+    height: 700px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.side-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.main-name {
+    font-size: 6.5em;
+    font-weight: 900;
+    padding: 29px 0;
+    margin: 14px 0 14px -5px;
+}
+
+.top-title {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.test {
+    padding-right: 115px;
+}
+
+.side-image {
+    background-image: url("../img/profile-transparent.png");
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    flex: 1;
+}
