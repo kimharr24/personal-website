@@ -31,19 +31,24 @@ body {
     flex: 1;
 }
 
-.main-name {
-    font-size: 6.5em;
-    font-weight: 900;
-    padding: 29px 0;
-    margin: 14px 0 14px -5px;
-}
-
 .top-title {
     font-size: 2em;
     font-weight: 700;
 }
 
-.test {
+.main-name {
+    font-size: 6.5em;
+    font-weight: 900;
+    padding: 29px 0;
+    margin: 16px 0 16px -5px;
+}
+
+.main-paragraph {
+    color: #999;
+    font-size: 1.3em;
+    line-height: 24px;
+    font-weight: 300px;
+    text-align: justify;
     padding-right: 115px;
 }
 
@@ -52,6 +57,44 @@ body {
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 70%;
     flex: 1;
 }
+
+.title-reveal {
+    position: relative;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.title-reveal.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.text-reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.text-reveal.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.image-reveal {
+    transform: scale3d(0.75, 0.75, 1);
+    transform-style: preserve-3d;
+    opacity: 0.2;
+    transition: all 1.5s ease;
+}
+
+.image-reveal.animate {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+}
+
+
