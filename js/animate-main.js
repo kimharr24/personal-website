@@ -15,7 +15,7 @@ window.addEventListener('scroll', reveal);
         }
 
         window.onload = function() {
-            var content = document.getElementsByClassName('active');
+            var content = document.getElementsByClassName('animate-on-load');
 
             for(var i = 0; i < content.length; i++) {
                 content[i].classList.add("animate");

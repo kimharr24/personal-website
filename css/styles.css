@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --jacket-red: #EB4353;
+}
+
 body {
     background-color: black;
     font-family: 'Raleway', sans-serif;
@@ -34,6 +38,10 @@ body {
 .top-title {
     font-size: 2em;
     font-weight: 700;
+    position: relative;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .main-name {
@@ -41,6 +49,10 @@ body {
     font-weight: 900;
     padding: 29px 0;
     margin: 16px 0 16px -5px;
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .main-paragraph {
@@ -50,6 +62,10 @@ body {
     font-weight: 300px;
     text-align: justify;
     padding-right: 115px;
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .linkedin {
@@ -57,7 +73,7 @@ body {
     opacity: 0;
     margin-top: 40px;
     padding-bottom: 9px;
-    border-bottom: 1px solid #EB4353;
+    border-bottom: 1px solid var(--jacket-red);
     transition: all 1s ease;
 }
 
@@ -74,11 +90,6 @@ body {
     font-weight: bold;
 }
 
-.linkedin.animate {
-    transform: translateY(0);
-    opacity: 1;
-}
-
 .side-image {
     background-image: url("../img/profile-transparent.png");
     height: 100%;
@@ -86,30 +97,6 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 70%;
     flex: 1;
-}
-
-.title-reveal {
-    position: relative;
-    transform: translateY(25px);
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-.title-reveal.animate {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.text-reveal {
-    position: relative;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-.text-reveal.animate {
-    transform: translateY(0);
-    opacity: 1;
 }
 
 .image-reveal {
@@ -137,24 +124,19 @@ body {
     flex: 1;
 }
 
-.machine-learning-red-title {
+.ml-red-title {
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #EB4353;
+    color: var(--jacket-red);
     margin-bottom: 15px;
     opacity: 0;
     transition: all 1s ease;
     transform: translateY(25px);
 }
 
-.machine-learning-red-title.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.machine-learning-white-title {
+.ml-white-title {
     font-size: 38px;
     line-height: 44px;
     font-weight: 900;
@@ -162,11 +144,6 @@ body {
     opacity: 0;
     transition: all 1s ease;
     transform: translateY(50px);
-}
-
-.machine-learning-white-title.animate {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .ml-paragraph {
@@ -179,11 +156,6 @@ body {
     opacity: 0;
     transition: all 1s ease;
     transform: translateY(50px);
-}
-
-.ml-paragraph.animate {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 #NN #neurons g {
@@ -205,5 +177,11 @@ body {
         transform: translateY(0);
     }
 }
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
