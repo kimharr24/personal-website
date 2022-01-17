@@ -124,4 +124,86 @@ body {
     opacity: 1;
 }
 
+.machine-learning {
+    position: relative;
+    top: 100px;
+}
+
+.ml-side-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.machine-learning-red-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #EB4353;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(25px);
+}
+
+.machine-learning-red-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.machine-learning-white-title {
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(50px);
+}
+
+.machine-learning-white-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ml-paragraph {
+    color: #999;
+    font-size: 1.3em;
+    line-height: 24px;
+    font-weight: 300px;
+    text-align: justify;
+    padding-right: 30px;
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(50px);
+}
+
+.ml-paragraph.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#NN #neurons g {
+    opacity: 0;
+}
+
+#NN.animate #neurons g {
+    animation: dropIn 1.5s ease forwards;
+    animation-delay: calc(var(--order) * 125ms)
+}
+
+@keyframes dropIn {
+    5% {
+        opacity: 0;
+        transform: translateY(15%);
+    }
+    15%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
