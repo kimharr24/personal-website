@@ -52,6 +52,33 @@ body {
     padding-right: 115px;
 }
 
+.linkedin {
+    transform: translateY(50px);
+    opacity: 0;
+    margin-top: 40px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #EB4353;
+    transition: all 1s ease;
+}
+
+.linkedin a {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.linkedin a:hover {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.linkedin.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .side-image {
     background-image: url("../img/profile-transparent.png");
     height: 100%;
