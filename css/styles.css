@@ -113,7 +113,7 @@ body {
 
 .machine-learning {
     position: relative;
-    top: 100px;
+    top: 150px;
 }
 
 .ml-side-box {
@@ -122,6 +122,12 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     flex: 1;
+}
+
+/* Fix for read papers button not loading because viewer didn't scroll far enough */
+.ml-side-box.animate .research-papers {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .ml-red-title {
@@ -150,12 +156,34 @@ body {
     color: #999;
     font-size: 1.3em;
     line-height: 24px;
-    font-weight: 300px;
-    text-align: justify;
+    font-weight: 300;
+    text-align: left;
     padding-right: 30px;
     opacity: 0;
     transition: all 1s ease;
     transform: translateY(50px);
+}
+
+.research-papers {
+    margin-top: 40px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--jacket-red);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.research-papers a {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.research-papers a:hover {
+    font-size: 12px;
+    font-weight: bold;
 }
 
 #NN #neurons g {
@@ -163,7 +191,7 @@ body {
 }
 
 #NN.animate #neurons g {
-    animation: dropIn 1.5s ease forwards;
+    animation: dropIn 2s ease forwards;
     animation-delay: calc(var(--order) * 125ms)
 }
 
@@ -176,6 +204,140 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.projects {
+    margin-top: 300px;
+}
+
+.project-img-container {
+    height: 100%;
+    flex: 1;
+}
+
+.project-img-1 {
+    margin-bottom: 11px;
+    border-radius: 5px;
+    background-image: url("../img/rps.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateX(75px);
+    transition: all 1s ease;
+}
+
+.project-img-1.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project-img-1 p, .project-img-2 p {
+    position: relative;
+    top: 60%;
+    left: 5%;
+    padding-left: 9px;
+    border-left: 1px solid var(--jacket-red);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.project-img-2 {
+    margin-bottom: 11px;
+    border-radius: 5px;
+    background-image: url("../img/HAR.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateX(75px);
+    transition: all 1s ease;
+}
+
+.project-img-2.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project-shadow {
+    height: 50%;
+    background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85));
+    transform: translateY(180px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.project-img-1:hover .project-shadow, .project-img-2:hover .project-shadow {
+    transform: translateY(170px);
+    opacity: 1;
+}
+
+.projects-heading {
+    font-size: 3.7em;
+    font-weight: bold;
+    letter-spacing: -2.2px;
+    line-height: 44px;
+    margin-bottom: 25px;
+    margin-left: -2px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.github {
+    margin-top: 40px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--jacket-red);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.github a {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.github a:hover {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Github button animation fix. */
+.side-box.animate div.github {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-text {
+    color: #999;
+    font-size: 1.3em;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: left;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.project-red-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--jacket-red);
+    margin-bottom: 15px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .animate {
