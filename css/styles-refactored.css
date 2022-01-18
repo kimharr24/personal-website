@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: black;
+    background-color:#101010;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
@@ -55,7 +55,6 @@ body {
     align-items: flex-start;
     flex: 1;
 }
-
 
 .centered-column {
     justify-content: center;
@@ -385,9 +384,56 @@ body {
     transform: translateX(18px);
 }
 
-/* Hobbies */
-.hobbies {
+/* Footer */
+.footer {
     margin-top: 250px;
+}
+
+.footer-container {
+    display: flex;
+    height: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-next {
+    margin-bottom: 25px;
+}
+
+.footer-awesome {
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.footer-paragraph {
+    padding: 0 50px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #999;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.footer-email {
+    color: #dfdede;
+    font-weight: bold;
+}
+
+.email-btn {
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--jacket-red);
+    margin-bottom: 100px;
+}
+
+.email-btn a:hover {
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* Animation Defaults Unless Overriden Above*/
