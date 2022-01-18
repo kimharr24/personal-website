@@ -56,6 +56,7 @@ body {
     flex: 1;
 }
 
+
 .centered-column {
     justify-content: center;
 }
@@ -288,6 +289,7 @@ body {
     line-height: 24px;
     font-weight: 300;
     text-align: left;
+    margin-right: 20px;
 }
 
 .github {
@@ -305,6 +307,87 @@ body {
 .subsection.animate div.github {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Experience Section */
+.experience {
+    margin-top: 250px;
+}
+
+.experience-container {
+    display: flex;
+    height: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(-75px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.experience-container.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.experience-top-section {
+    display: flex;
+    height: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 80px;
+}
+
+.experience-heading {
+    font-size: 3.7em;
+    font-weight: bold;
+}
+
+.get-resume {
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--jacket-red);
+    transform: translateY(-10px);
+}
+
+.get-resume a:hover {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.company {
+    padding-left: 17px;
+    height: 10px;
+    line-height: 20px;
+    border-left: 1px solid var(--jacket-red);
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+.position {
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 200;
+    transform: translateX(18px);
+}
+
+.position-dates {
+    padding-top: 8px;
+    margin-top: 0;
+    color: #6d6d6d;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    transform: translateX(18px);
+}
+
+/* Hobbies */
+.hobbies {
+    margin-top: 250px;
 }
 
 /* Animation Defaults Unless Overriden Above*/
