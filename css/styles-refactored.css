@@ -43,12 +43,6 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 1000px) {
-    .container {
-        flex-direction: column;
-    }
-}
-
 .subsection {
     display: flex;
     flex-direction: column;
@@ -453,4 +447,167 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* General Styling */
+@media (max-width: 912px) {
+    .container {
+        flex-direction: column;
+    }
+    /* Horizontally center align subsections */
+    .subsection {
+        align-items: center;
+    }
+    /* Center text to be 80% of the screen */
+    .main-paragraph, .ml-red-title, .ml-white-title, .ml-paragraph,
+    .project-red-title, .project-text, .projects-heading,
+    .footer-awesome {
+        text-align: center;
+        max-width: 80%;
+    } 
+    /* Remove all right padding from paragraphs */
+    .main-paragraph, .ml-paragraph, .project-text {
+        padding-right: 0;
+    }
+    /* Shift SVG */
+    .subsection svg {
+        transform: translateX(6%);
+    }
+    /* Separate images from button */
+    .github {
+        margin-bottom: 40px;
+    }
+
+    /* Remove -2px margin */
+    .projects-heading {
+        margin-left: 0px;
+    }
+    /* Remove 20px right margin */
+    .project-text {
+        margin-right: 0;
+    }
+}
+
+/* MAIN PAGE MEDIA QUERIES */
+/* Surface Pro 7 */
+@media (max-width: 912px) { 
+    .main-responsive {
+        background-image: url("../img/profile-transparent.png");
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+    /* Move down text */
+    .main-responsive .subsection {
+        transform: translateY(10%);
+    }
+    /* Change text color to white for visibility */
+    .main-paragraph {
+        color: white;
+    }
+    /* Remove side image */
+    .side-image {
+        display: none;
+    }
+}
+
+/* Laptop main text overflow breakpoint */
+@media (max-width: 500px) {
+    .main-title {
+        font-size: 1.5em;
+    }
+    .main-name {
+        font-size: 3em;
+        margin: -0.5vh 0;
+        margin: -10px 0 -10px 0;
+    }
+    .main-paragraph {
+        font-size: 1em;
+        max-width: 100%;
+    }
+    .linkedin {
+        margin-top: 5px;
+    }
+}
+
+@media(max-width: 470px) {
+    .main-section .container .subsection {
+        transform: translateY(-20px);
+    }
+}
+
+@media(max-width: 420px) {
+    .main-section {
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width: 405px) {
+    .main-section {
+        transform: scale(0.8);
+    }
+}
+
+/* SVG Media Query */
+
+@media (max-width: 450px) {
+    .subsection svg {
+        display: none;
+    }
+    .main-section {
+        margin-bottom: -250px;
+    }
+}
+/* EXPERIENCE MEDIA QUERIES */
+@media (max-width: 912px) {
+    /* Wrap the rows and place space around boxes */
+    .experience-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    /* Align Top Section with boxes */
+    .experience-top-section {
+        padding: 0 50px;
+    }
+    .ligo {
+        transform: translateX(-10%);
+    }
+    .nasa {
+        transform: translate(-3%);
+        margin-top: 25px;
+    }
+}
+/* iPad Mini */
+@media(max-width: 768px) {
+    .experience-top-section {
+        padding: 0 18px;
+    }
+}
+/* Laptop breakpoint - 2x2 to 1x4 system*/
+@media(max-width: 695px) {
+    .experience-top-section {
+        padding: 0 25px;
+        justify-content: space-between;
+    }
+    .ligo, .nasa {
+        transform: translateX(0);
+    }
+    .nsf, .ligo {
+        margin-top: 15px;
+    }
+    .experience-container {
+        padding-left: 25px;
+        justify-content: flex-start;
+    }
+}
+/* Laptop breakpoint - button and heading intersect */
+@media(max-width: 470px) {
+    .experience-top-section {
+        flex-direction: column;
+    }
+    .get-resume {
+        margin-top: 50px;
+    }
+}
+
 
