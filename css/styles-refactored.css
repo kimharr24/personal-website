@@ -571,6 +571,7 @@ body {
     }
     .ligo {
         transform: translateX(-10%);
+        margin-top: 25px;
     }
     .nasa {
         transform: translate(-3%);
